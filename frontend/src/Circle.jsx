@@ -1,43 +1,31 @@
-import React, { useState, useEffect } from "react";
+// src/Circle.jsx
+import React, { useState } from "react";
 
-const Circle = ({ onClick, spreadArea }) => {
-  const [position, setPosition] = useState({
-    top: `${Math.random() * spreadArea}px`,
-    left: `${Math.random() * spreadArea}px`,
+const Circle = ({ onClick }) => {
+  const [circleStyle, setCircleStyle] = useState({
+    width: `${Math.random() * 100 + 30}px`,
+    height: `${Math.random() * 100 + 30}px`,
+    borderRadius: "50%",
+    background: "#00EAD3", // Updated color code
+    position: "absolute",
+    top: `${Math.random() * (window.innerHeight - 100)}px`,
+    left: `${Math.random() * (window.innerWidth - 100)}px`,
+    cursor: "pointer",
   });
 
   const handleClick = () => {
     onClick();
-    setPosition({
-      top: `${Math.random() * spreadArea}px`,
-      left: `${Math.random() * spreadArea}px`,
-    });
+    setCircleStyle((prevStyle) => ({
+      ...prevStyle,
+      top: `${Math.random() * (window.innerHeight - 100)}px`,
+      left: `${Math.random() * (window.innerWidth - 100)}px`,
+    }));
   };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setPosition({
-        top: `${Math.random() * spreadArea}px`,
-        left: `${Math.random() * spreadArea}px`,
-      });
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [spreadArea]);
 
   return (
     <div
       className="circle"
-      style={{
-        position: "absolute",
-        width: "50px",
-        height: "50px",
-        borderRadius: "50%",
-        background: "green",
-        top: position.top,
-        left: position.left,
-        cursor: "pointer",
-      }}
+      style={circleStyle}
       onClick={handleClick}
     ></div>
   );
