@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Circle Clicker Game</h1>
+      <h1>Aim Trainer</h1>
       <p>Clicks: {clicks}</p>
       <div className="circle-container">
         {[...Array(10)].map((_, index) => (
