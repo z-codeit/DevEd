@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FFA384;    
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 30pt;
+}
+
+.test {
+    background-color: #FFA384;
+}
+
+.LeaderboardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+}
+
+.Leaderboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.NameField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+    background-color: #69F6D5;
+}
+
+input:focus{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 200%;
+    
+}
+
+.PlayButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
