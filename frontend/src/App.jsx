@@ -10,6 +10,10 @@ function App() {
     setClicks((prevClicks) => prevClicks + 1);
   };
 
+  const handleResetClick = () => {
+    setClicks(0);
+  };
+
   return (
     <div className="App">
       {/* Display the logo image */}
@@ -21,6 +25,7 @@ function App() {
           <Circle key={index} onClick={handleCircleClick} spreadArea={400} />
         ))}
       </div>
+      <button onClick={handleResetClick}>Reset Score</button>
     </div>
   );
 }
