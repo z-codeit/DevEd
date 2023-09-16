@@ -1,15 +1,29 @@
-import { useState } from 'react';
+// src/App.js
+import React, { useState } from "react";
+import Circle from "./Circle";
+import logo from "./logo.png";
 import './App.css';
 
 function App() {
+  const [clicks, setClicks] = useState(0);
   const leaderboard = ["test1", "test2", "test3"];
 
+
+  const handleCircleClick = () => {
+    setClicks((prevClicks) => prevClicks + 1);
+  };
+
+  const handleResetClick = () => {
+    setClicks(0);
+  };
+
   return (
-    <>
-    <div class='test'>
+    <div className="App">
+      <img src={logo} alt="Logo" />
+      <div class='test'>
       <div class="Title">
-        <h2> Aim Trainer </h2>
-        </div>
+      <h1>Aim Trainer</h1>
+      </div>
         <div class="LeaderboardTitle">
         <h3>Leaderboard</h3>
         </div>
@@ -29,7 +43,16 @@ function App() {
         <button type="button">Play</button>
         </div>
       </div>
-    </>
+
+      <p>Clicks: {clicks}</p>
+      <div className="circle-container">
+        {[...Array(10)].map((_, index) => (
+          <Circle key={index} onClick={handleCircleClick} />
+        ))}
+      </div>
+      <button onClick={handleResetClick}>Reset Score</button>
+    </div>
+    
   );
 }
 
