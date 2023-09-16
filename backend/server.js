@@ -36,7 +36,7 @@ const users = {
 };
 
 app.get("/api/users", (request, response) => {
-  response.json(JSON.stringify(assets));
+  response.json(users);
 });
 
 const PORT = process.env.PORT || "3001";
