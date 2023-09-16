@@ -1,19 +1,29 @@
-// src/components/Circle.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Circle = ({ onClick }) => {
+const Circle = ({ onClick, spreadArea }) => {
   const [position, setPosition] = useState({
-    top: Math.random() * 400 + "px",
-    left: Math.random() * 400 + "px",
+    top: `${Math.random() * spreadArea}px`,
+    left: `${Math.random() * spreadArea}px`,
   });
 
   const handleClick = () => {
     onClick();
     setPosition({
-      top: Math.random() * 400 + "px",
-      left: Math.random() * 400 + "px",
+      top: `${Math.random() * spreadArea}px`,
+      left: `${Math.random() * spreadArea}px`,
     });
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setPosition({
+        top: `${Math.random() * spreadArea}px`,
+        left: `${Math.random() * spreadArea}px`,
+      });
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [spreadArea]);
 
   return (
     <div

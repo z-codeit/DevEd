@@ -15,7 +15,7 @@ function App() {
       <p>Clicks: {clicks}</p>
       <div className="circle-container">
         {[...Array(10)].map((_, index) => (
-          <Circle key={index} onClick={handleCircleClick} />
+          <Circle key={index} onClick={handleCircleClick} spreadArea={400} />
         ))}
       </div>
     </div>
