@@ -33,7 +33,7 @@ const Circle = ({ onClick, spreadArea }) => {
         width: "50px",
         height: "50px",
         borderRadius: "50%",
-        background: "blue",
+        background: "green",
         top: position.top,
         left: position.left,
         cursor: "pointer",

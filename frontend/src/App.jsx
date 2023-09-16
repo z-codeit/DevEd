@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState } from "react";
 import Circle from "./Circle";
+import logo from "./logo.png"; // Import the logo image
 
 function App() {
   const [clicks, setClicks] = useState(0);
@@ -11,6 +12,8 @@ function App() {
 
   return (
     <div className="App">
+      {/* Display the logo image */}
+      <img src={logo} alt="Logo" />
       <h1>Aim Trainer</h1>
       <p>Clicks: {clicks}</p>
       <div className="circle-container">
