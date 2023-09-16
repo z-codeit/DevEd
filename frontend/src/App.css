@@ -1,0 +1,70 @@
+html {
+    height: 100%;
+    background-color: #FFA384;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 30pt;
+}
+
+.LeaderboardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+}
+
+.Leaderboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.NameField{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+    background-color: #69F6D5;
+}
+
+input:focus{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 200%;
+    
+}
+
+.PlayButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
