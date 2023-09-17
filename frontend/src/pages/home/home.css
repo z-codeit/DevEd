@@ -1,6 +1,13 @@
 body {
-  background-color: #ffa384;
+  background-color: #4d4a49;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -8,6 +15,7 @@ body {
 .title {
   display: flex;
   font-size: 30px;
+  color: white;
 }
 
 img {
