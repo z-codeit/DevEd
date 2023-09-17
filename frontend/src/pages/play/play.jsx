@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./play.css";
 import Circle from "./Circle";
+import Form from "react-bootstrap/Form";
+import axios from "axios";
 
 const Statistics = ({ total, score, time }) => {
   if (time === 0) {
@@ -41,15 +43,36 @@ const CircleContainer = ({ total, score, setTotal, setScore, time }) => {
   );
 };
 
-const Result = ({ score, total, time }) => {
+const Result = ({ score, total, time, navigate }) => {
   if (time > 0) {
     return;
   }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const name = document.getElementById("inputForm").value;
+    axios
+      .post("https://aimtrainer.fly.dev/api/users", {
+        name: name,
+        score: score,
+      })
+    navigate("/");
+  };
+
   return (
     <div id="result">
       <h1>Game Over</h1>
       <h2>Your Score: {score}</h2>
       <h2>Your Accuracy: {parseFloat((score / total) * 100).toFixed(1)}%</h2>
+      <Form id="form" onSubmit={handleSubmit}>
+        <Form.Group controlId="formBasicInput">
+          <Form.Control
+            id="inputForm"
+            type="text"
+            placeholder="Enter your name"
+          />
+        </Form.Group>
+        <button type="submit">Submit</button>
+      </Form>
     </div>
   );
 };
@@ -79,7 +102,7 @@ function Play() {
   return (
     <div className="container2" onClick={handleMissClick}>
       <Statistics total={total} score={score} time={time} />
-      <Result score={score} total={total} time={time} />
+      <Result score={score} total={total} time={time} navigate={navigate} />
       <CircleContainer
         total={total}
         score={score}
