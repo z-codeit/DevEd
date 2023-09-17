@@ -19,6 +19,22 @@ const users = [
   { name: "Jenny", score: 80 },
 ];
 
+app.post("/api/users", (request, response) => {
+  const body = request.body;
+  // if (!body.name || !body.score) {
+  //   return response.status(400).json({
+  //     error: "content missing",
+  //   });
+  // }
+  let user = {
+    name: body.name,
+    score: body.score,
+  };
+  users.push(user);
+  console.log(user);
+  response.json(user);
+});
+
 app.get("/api/users", (request, response) => {
   response.json(users);
 });
