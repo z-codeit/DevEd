@@ -4,6 +4,7 @@ import "./play.css";
 import Circle from "./Circle";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
+import sound from "./lasershot.wav";
 
 const Statistics = ({ total, score, time }) => {
   if (time === 0) {
@@ -23,7 +24,10 @@ const Statistics = ({ total, score, time }) => {
 };
 
 const CircleContainer = ({ total, score, setTotal, setScore, time }) => {
+  const play = () => {new Audio(sound).play()}
+
   const handleCircleClick = () => {
+    play();
     setScore(score + 1);
     setTotal(total + 1);
     return;
