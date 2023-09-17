@@ -72,6 +72,7 @@ const Result = ({ score, total, time, navigate }) => {
             id="inputForm"
             type="text"
             placeholder="Enter your name"
+            className="input-box"
           />
         </Form.Group>
         <button type="submit">Submit</button>
