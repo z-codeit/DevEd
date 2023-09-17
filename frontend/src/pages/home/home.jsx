@@ -15,7 +15,6 @@ const Title = () => {
 
 const CircleContainer = () => {
   const handleCircleClick = () => {
-    // setClicks((prevClicks) => prevClicks + 1);
     return;
   };
 
