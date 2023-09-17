@@ -45,13 +45,15 @@ function Home() {
     <div className="container">
       <Title />
       <CircleContainer />
-      <ol>
-        {data.map((user, i) => (
-          <li key={i}>
-            {user.name} - {user.score}
-          </li>
-        ))}
-      </ol>
+      <div className="card">
+        <ol>
+          {data.map((user, i) => (
+            <li key={i}>
+              {user.name} - {user.score}
+            </li>
+          ))}
+        </ol>
+      </div>
       <button onClick={handleClick}>Start</button>
     </div>
   );
