@@ -1,8 +1,13 @@
-body {
+/* body {
   background-color: #ffa384;
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .title {
