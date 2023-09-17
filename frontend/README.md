@@ -1,8 +1,32 @@
-# React + Vite
+# Aim Trainer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a circle clicker game with a leaderboard to showcase your high score. This application primarily uses **React.js** as our framework for building the user interface and **node.js** for the server.
 
-Currently, two official plugins are available:
+## Project Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Leaderboard](src/assets/Leaderboard.png)
+![GamePage](<src/assets/Game page.png>)
+![GameOver](<src/assets/Game over.png>)
+
+## Project Description
+
+Aim trainer was developed to test and train one's ability to aim properly. This web application consists of 3 pages -> home page, game page, and leaderboard page. The application uses the React Router library to handle navigation between these pages. Everytime the user click on a circle, a sound (retro laser shooter) is emitted. There is a leaderboard to keep track of points as well.
+
+**Technologies Used:** React.js, node.js, express.js
+
+## How to Run
+
+- Clone the repository
+- Make sure that you have Node.js and npm (Node Package Manager) installed on your system
+- cd to frontend
+- Install the required dependencies by running the following in the terminal:
+
+  ```
+  npm install
+  ```
+
+  ```
+  npm run dev
+  ```
+
+- This will start the development server and it is accessible the application in the web browser at as shown in the terminal
