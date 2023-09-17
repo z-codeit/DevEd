@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./play.css";
 import RandomlyAppearingComponent from "./r";
+import Circle from "./Circle";
 
 const Statistics = ({ total, score, time }) => {
   return (
