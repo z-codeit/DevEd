@@ -1,9 +1,7 @@
 import { useState } from "react";
-import logo from "./assets/logo.png";
-import Circle from "./pages/home/Circle";
 import "./App.css";
 import Home from "./pages/home/home.jsx";
-import Play from "./pages/home/play/play";
+import Play from "./pages/play/play";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
