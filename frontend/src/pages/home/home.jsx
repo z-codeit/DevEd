@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./home.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Circle from "./Circle";
+import axios from "axios";
 
 const Title = () => {
   return (
@@ -29,15 +30,28 @@ const CircleContainer = () => {
 
 function Home() {
   const navigate = useNavigate();
+  const [data, setData] = useState([]);
+
+  axios.get("https://aimtrainer.fly.dev/api/users").then((res) => {
+    let sorted = res.data.sort((a, b) => b.score - a.score);
+    setData(sorted);
+  });
 
   const handleClick = (event) => {
-    navigate('/play');
+    navigate("/play");
   };
 
   return (
     <div className="container">
       <Title />
       <CircleContainer />
+      <ol>
+        {data.map((user, i) => (
+          <li key={i}>
+            {user.name} - {user.score}
+          </li>
+        ))}
+      </ol>
       <button onClick={handleClick}>Start</button>
     </div>
   );
