@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("dist"));
 
-const users = [];
+const users = [{ name: "Ed", score: 50 }];
 
 app.post("/api/users", (request, response) => {
   const body = request.body;

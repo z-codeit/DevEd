@@ -50,11 +50,10 @@ const Result = ({ score, total, time, navigate }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = document.getElementById("inputForm").value;
-    axios
-      .post("https://aimtrainer.fly.dev/api/users", {
-        name: name,
-        score: score,
-      })
+    axios.post("https://aimtrainer.fly.dev/api/users", {
+      name: name,
+      score: score,
+    });
     navigate("/");
   };
 
@@ -81,7 +80,7 @@ function Play() {
   const navigate = useNavigate();
   const [total, setTotal] = useState(0);
   const [score, setScore] = useState(0);
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(30);
 
   useEffect(() => {
     if (time === 0) {
