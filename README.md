@@ -4,9 +4,9 @@ This is a circle clicker game with a leaderboard to showcase your high score. Th
 
 ## Project Demo
 
-![Leaderboard](src/assets/Leaderboard.png)
-![GamePage](<src/assets/Game page.png>)
-![GameOver](<src/assets/Game over.png>)
+![Leaderboard](frontend/src/assets/Leaderboard.png)
+![GamePage](<frontend/src/assets/Game page.png>)
+![GameOver](<frontend/src/assets/Game over.png>)
 
 ## Project Description
 
