@@ -39,3 +39,7 @@ ol {
   overflow: auto;
   margin-bottom: 50px;
 }
+
+li {
+  color: white;
+}
